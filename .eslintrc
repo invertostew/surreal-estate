@@ -6,8 +6,10 @@
   },
   "extends": [
       "airbnb",
+      "airbnb-typescript",
       "plugin:react/recommended",
-      "plugin:prettier/recommended"
+      "plugin:prettier/recommended",
+      "plugin:import/typescript"
   ],
   "globals": {
       "Atomics": "readonly",
