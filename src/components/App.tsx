@@ -1,12 +1,14 @@
 import React from "react";
 
+import Header from "./Header";
+
 import "../styles/App.css";
 
 function App() {
   return (
-    <div className="surreal-estate-app">
-      <h2>Surreal Estate</h2>
-    </div>
+    <main className="surreal-estate-app">
+      <Header />
+    </main>
   );
 }
 

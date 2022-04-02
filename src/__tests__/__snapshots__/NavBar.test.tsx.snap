@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar renders correctly 1`] = `
+<DocumentFragment>
+  <nav
+    class="navbar"
+  >
+    <ul
+      class="navbar-links"
+    >
+      <li
+        class="navbar-links__item"
+      >
+        <a
+          href="#!"
+        >
+          View Properties
+        </a>
+      </li>
+      <li
+        class="navbar-links__item"
+      >
+        <a
+          href="#!"
+        >
+          Add a Property
+        </a>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;

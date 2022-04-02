@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<DocumentFragment>
+  <header
+    class="header"
+  >
+    <div
+      class="header-logo"
+    >
+      <img
+        alt="Surreal Estate"
+        class="header-logo__logo"
+        src="#"
+      />
+    </div>
+    <nav
+      class="navbar"
+    >
+      <ul
+        class="navbar-links"
+      >
+        <li
+          class="navbar-links__item"
+        >
+          <a
+            href="#!"
+          >
+            View Properties
+          </a>
+        </li>
+        <li
+          class="navbar-links__item"
+        >
+          <a
+            href="#!"
+          >
+            Add a Property
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</DocumentFragment>
+`;
