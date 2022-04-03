@@ -8,13 +8,14 @@ function NavBar() {
     <nav className="navbar">
       <ul className="navbar-links">
         <li className="navbar-links__item">
-          <NavLink to="/" className="navbar-link" activeClassName="selected">
+          <NavLink exact to="/" className="navbar-link" activeClassName="selected">
             View Properties
           </NavLink>
         </li>
 
         <li className="navbar-links__item">
           <NavLink
+            exact
             to="/add-property"
             className="navbar-link"
             activeClassName="selected"
