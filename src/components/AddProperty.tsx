@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import axios from "axios";
 
+import Alert from "./Alert";
+
 const AddProperty: React.FC = (): JSX.Element => {
   const initialState = {
     fields: {
@@ -13,22 +15,35 @@ const AddProperty: React.FC = (): JSX.Element => {
       city: "",
       email: "",
     },
+    alert: {
+      message: "",
+      isSuccess: false,
+    },
   };
 
   const [fields, setFields] = useState(initialState.fields);
+  const [alert, setAlert] = useState(initialState.alert);
 
   const handleAddProperty = (event: React.FormEvent): void => {
     event.preventDefault();
+
+    setAlert({ message: "", isSuccess: false });
 
     const ENDPOINT = process.env?.REACT_APP_PROPERTY_LISTING_ENDPOINT as string;
 
     axios
       .post(ENDPOINT, fields)
-      .then((res) => {
-        console.log(res);
+      .then(() => {
+        setAlert({
+          message: "Property Added!",
+          isSuccess: true,
+        });
       })
-      .catch((err) => {
-        console.error(err);
+      .catch(() => {
+        setAlert({
+          message: "Server error. Please try again later.",
+          isSuccess: false,
+        });
       });
   };
 
@@ -43,6 +58,8 @@ const AddProperty: React.FC = (): JSX.Element => {
 
   return (
     <section className="add-property" onSubmit={handleAddProperty}>
+      <Alert message={alert.message} success={alert.isSuccess} />
+
       <form className="add-property-form">
         <label>
           Title
@@ -85,6 +102,7 @@ const AddProperty: React.FC = (): JSX.Element => {
             id="bedrooms"
             name="bedrooms"
             type="number"
+            min="1"
             placeholder="2"
             value={fields.bedrooms}
             onChange={handleFieldChange}
@@ -98,6 +116,7 @@ const AddProperty: React.FC = (): JSX.Element => {
             id="bathrooms"
             name="bathrooms"
             type="number"
+            min="1"
             placeholder="2"
             value={fields.bathrooms}
             onChange={handleFieldChange}
@@ -111,6 +130,7 @@ const AddProperty: React.FC = (): JSX.Element => {
             id="price"
             name="price"
             type="number"
+            min="1"
             placeholder="234995"
             value={fields.price}
             onChange={handleFieldChange}
