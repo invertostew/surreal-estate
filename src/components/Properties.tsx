@@ -1,7 +1,7 @@
 import React from "react";
 
-function Properties() {
+const Properties: React.FC = (): JSX.Element => {
   return <section className="properties">Properties Page</section>;
-}
+};
 
 export default Properties;

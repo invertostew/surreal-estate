@@ -7,7 +7,7 @@ import AddProperty from "./AddProperty";
 
 import "../styles/App.css";
 
-function App() {
+const App: React.FC = (): JSX.Element => {
   return (
     <main className="surreal-estate-app">
       <Header />
@@ -17,6 +17,6 @@ function App() {
       </Switch>
     </main>
   );
-}
+};
 
 export default App;

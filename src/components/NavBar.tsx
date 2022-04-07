@@ -3,12 +3,17 @@ import { NavLink } from "react-router-dom";
 
 import "../styles/NavBar.css";
 
-function NavBar() {
+const NavBar: React.FC = (): JSX.Element => {
   return (
     <nav className="navbar">
       <ul className="navbar-links">
         <li className="navbar-links__item">
-          <NavLink exact to="/" className="navbar-link" activeClassName="selected">
+          <NavLink
+            exact
+            to="/"
+            className="navbar-link"
+            activeClassName="selected"
+          >
             View Properties
           </NavLink>
         </li>
@@ -26,6 +31,6 @@ function NavBar() {
       </ul>
     </nav>
   );
-}
+};
 
 export default NavBar;
