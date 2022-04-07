@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import axios from "axios";
+
 const AddProperty: React.FC = (): JSX.Element => {
   const initialState = {
     fields: {
@@ -18,7 +20,16 @@ const AddProperty: React.FC = (): JSX.Element => {
   const handleAddProperty = (event: React.FormEvent): void => {
     event.preventDefault();
 
-    console.log(fields);
+    const ENDPOINT = process.env?.REACT_APP_PROPERTY_LISTING_ENDPOINT as string;
+
+    axios
+      .post(ENDPOINT, fields)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   const handleFieldChange = (event: React.FormEvent): void => {
