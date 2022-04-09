@@ -3,7 +3,7 @@
   flex-flow: row wrap;
   align-items: center;
   padding: 1rem;
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.066);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
   background-color: #fff;
 }
 
@@ -14,33 +14,4 @@
 .header-logo__logo {
   max-height: 80px;
   width: auto;
-}
-
-.navbar-links {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.navbar-links__item {
-  display: inline-block;
-  margin-right: 0.5rem;
-  padding: 0.5rem;
-}
-
-.navbar-links__item:first-of-type {
-  margin-left: 0.5rem;
-}
-
-.navbar-links__item:last-of-type {
-  margin-right: 0;
-}
-
-.navbar-link {
-  text-decoration: none;
-  color: #3a3b3c;
-}
-
-.navbar-link.selected {
-  color: red;
 }

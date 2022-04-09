@@ -4,15 +4,17 @@ import axios from "axios";
 
 import Alert from "./Alert";
 
+import "../styles/AddProperty.css";
+
 const AddProperty: React.FC = (): JSX.Element => {
   const initialState = {
     fields: {
       title: "",
       type: "",
+      city: "",
       bedrooms: "",
       bathrooms: "",
       price: "",
-      city: "",
       email: "",
     },
     alert: {
@@ -61,7 +63,7 @@ const AddProperty: React.FC = (): JSX.Element => {
       <Alert message={alert.message} success={alert.isSuccess} />
 
       <form className="add-property-form">
-        <label>
+        <label className="add-property-form__label">
           Title
           <input
             className="add-property-form__input"
@@ -71,17 +73,19 @@ const AddProperty: React.FC = (): JSX.Element => {
             placeholder="2 Bed Flat"
             value={fields.title}
             onChange={handleFieldChange}
+            required
           />
         </label>
 
-        <label>
+        <label className="add-property-form__label">
           Type
           <select
-            className="add-propert-form__select"
+            className="add-property-form__select"
             id="type"
             name="type"
             value={fields.type}
             onChange={handleFieldChange}
+            required
           >
             <option value="" disabled defaultValue="">
               Please select...
@@ -95,56 +99,15 @@ const AddProperty: React.FC = (): JSX.Element => {
           </select>
         </label>
 
-        <label>
-          Bedrooms
-          <input
-            className="add-property-form__input"
-            id="bedrooms"
-            name="bedrooms"
-            type="number"
-            min="1"
-            placeholder="2"
-            value={fields.bedrooms}
-            onChange={handleFieldChange}
-          />
-        </label>
-
-        <label>
-          Bathrooms
-          <input
-            className="add-property-form__input"
-            id="bathrooms"
-            name="bathrooms"
-            type="number"
-            min="1"
-            placeholder="2"
-            value={fields.bathrooms}
-            onChange={handleFieldChange}
-          />
-        </label>
-
-        <label>
-          Price
-          <input
-            className="add-property-form__input"
-            id="price"
-            name="price"
-            type="number"
-            min="1"
-            placeholder="234995"
-            value={fields.price}
-            onChange={handleFieldChange}
-          />
-        </label>
-
-        <label>
+        <label className="add-property-form__label">
           City
           <select
-            className="add-propert-form__select"
+            className="add-property-form__select"
             id="city"
             name="city"
             value={fields.city}
             onChange={handleFieldChange}
+            required
           >
             <option value="" disabled defaultValue="">
               Please select...
@@ -156,8 +119,53 @@ const AddProperty: React.FC = (): JSX.Element => {
           </select>
         </label>
 
-        <label>
-          Email
+        <label className="add-property-form__label">
+          Bedrooms
+          <input
+            className="add-property-form__input"
+            id="bedrooms"
+            name="bedrooms"
+            type="number"
+            min="1"
+            placeholder="2"
+            value={fields.bedrooms}
+            onChange={handleFieldChange}
+            required
+          />
+        </label>
+
+        <label className="add-property-form__label">
+          Bathrooms
+          <input
+            className="add-property-form__input"
+            id="bathrooms"
+            name="bathrooms"
+            type="number"
+            min="1"
+            placeholder="2"
+            value={fields.bathrooms}
+            onChange={handleFieldChange}
+            required
+          />
+        </label>
+
+        <label className="add-property-form__label">
+          Price
+          <input
+            className="add-property-form__input"
+            id="price"
+            name="price"
+            type="number"
+            min="1"
+            placeholder="234995"
+            value={fields.price}
+            onChange={handleFieldChange}
+            required
+          />
+        </label>
+
+        <label id="email-label" className="add-property-form__label">
+          Email Address
           <input
             className="add-property-form__input"
             id="email"
@@ -166,10 +174,11 @@ const AddProperty: React.FC = (): JSX.Element => {
             placeholder="person@email.com"
             value={fields.email}
             onChange={handleFieldChange}
+            required
           />
         </label>
 
-        <button type="submit" className="add-property__button">
+        <button type="submit" className="add-property-form__button">
           Add Property
         </button>
       </form>

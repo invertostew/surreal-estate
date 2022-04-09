@@ -1,0 +1,51 @@
+.add-property {
+  max-width: 1140px;
+  width: 100%;
+  margin: 2rem auto auto
+}
+
+.add-property-form {
+  border-radius: 0.75rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+  padding: 2rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.add-property-form__label {
+  display: flex;
+  flex-flow: column nowrap;
+  font-weight: 500;
+}
+
+.add-property-form__input,
+.add-property-form__select,
+.add-property-form__button {
+  padding: 1rem 1.5rem;
+}
+
+.add-property-form__input,
+.add-property-form__select {
+  margin-top: 0.25rem;
+  border: 2px solid #ddd;
+  border-radius: 0.75rem;
+}
+
+.add-property-form__button {
+  border: 2px solid #1d4ed8;
+  background-color: #1d4ed8;
+  color: #fff;
+  border-radius: 99px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1rem;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+#email-label {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}

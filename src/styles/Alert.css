@@ -1,0 +1,22 @@
+.alert {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+  padding: 1rem;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.alert--success {
+  color: #15803d;
+  background-color: #dcfce7;
+  border-color: #dcfce7;
+}
+
+.alert--error {
+  color: #b91c1c;
+  background-color: #fee2e2;
+  border-color: #fee2e2
+}
