@@ -63,7 +63,7 @@ const AddProperty: React.FC = (): JSX.Element => {
       <Alert message={alert.message} success={alert.isSuccess} />
 
       <form className="add-property-form">
-        <label className="add-property-form__label">
+        <label className="add-property-form__label" htmlFor="title">
           Title
           <input
             className="add-property-form__input"
@@ -77,7 +77,7 @@ const AddProperty: React.FC = (): JSX.Element => {
           />
         </label>
 
-        <label className="add-property-form__label">
+        <label className="add-property-form__label" htmlFor="type">
           Type
           <select
             className="add-property-form__select"
@@ -99,7 +99,7 @@ const AddProperty: React.FC = (): JSX.Element => {
           </select>
         </label>
 
-        <label className="add-property-form__label">
+        <label className="add-property-form__label" htmlFor="city">
           City
           <select
             className="add-property-form__select"
@@ -119,7 +119,7 @@ const AddProperty: React.FC = (): JSX.Element => {
           </select>
         </label>
 
-        <label className="add-property-form__label">
+        <label className="add-property-form__label" htmlFor="bedrooms">
           Bedrooms
           <input
             className="add-property-form__input"
@@ -134,7 +134,7 @@ const AddProperty: React.FC = (): JSX.Element => {
           />
         </label>
 
-        <label className="add-property-form__label">
+        <label className="add-property-form__label" htmlFor="bathrooms">
           Bathrooms
           <input
             className="add-property-form__input"
@@ -149,7 +149,7 @@ const AddProperty: React.FC = (): JSX.Element => {
           />
         </label>
 
-        <label className="add-property-form__label">
+        <label className="add-property-form__label" htmlFor="price">
           Price
           <input
             className="add-property-form__input"
@@ -164,7 +164,11 @@ const AddProperty: React.FC = (): JSX.Element => {
           />
         </label>
 
-        <label id="email-label" className="add-property-form__label">
+        <label
+          id="email-label"
+          className="add-property-form__label"
+          htmlFor="email"
+        >
           Email Address
           <input
             className="add-property-form__input"
