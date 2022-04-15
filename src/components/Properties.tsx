@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import axios from "axios";
 
@@ -20,11 +21,13 @@ const Properties: React.FC = (): JSX.Element => {
   const [properties, setProperties] = useState<any[]>(initialState.properties);
   const [alert, setAlert] = useState(initialState.alert);
 
+  const { search } = useLocation();
+
   useEffect(() => {
     const ENDPOINT = process.env?.REACT_APP_PROPERTY_LISTING_ENDPOINT as string;
 
     axios
-      .get(ENDPOINT)
+      .get(`${ENDPOINT}${search}`)
       .then((res) => {
         setProperties(res.data);
         setAlert({
@@ -38,7 +41,7 @@ const Properties: React.FC = (): JSX.Element => {
           isSuccess: false,
         });
       });
-  }, []);
+  }, [search]);
 
   return (
     <section className="properties">

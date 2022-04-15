@@ -1,14 +1,9 @@
-.add-property {
-  max-width: 1140px;
-  width: 100%;
-  margin: 2rem auto auto
-}
-
 .add-property-form {
   border-radius: 0.75rem;
   background-color: #fff;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
   padding: 2rem;
+  margin: 2rem;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
