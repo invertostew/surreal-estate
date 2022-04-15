@@ -5,6 +5,8 @@ import axios from "axios";
 import Alert from "./Alert";
 import PropertyCard from "./PropertyCard";
 
+import "../styles/Properties.css";
+
 const Properties: React.FC = (): JSX.Element => {
   const initialState = {
     properties: [],
@@ -26,7 +28,7 @@ const Properties: React.FC = (): JSX.Element => {
       .then((res) => {
         setProperties(res.data);
         setAlert({
-          message: "Cool",
+          message: "",
           isSuccess: true,
         });
       })
@@ -43,7 +45,16 @@ const Properties: React.FC = (): JSX.Element => {
       <Alert message={alert.message} success={alert.isSuccess} />
 
       {properties.map((property) => (
-        <PropertyCard key={property._id} {...property} />
+        <PropertyCard
+          key={property._id}
+          title={property.title}
+          type={property.type}
+          city={property.city}
+          bathrooms={property.bathrooms}
+          bedrooms={property.bedrooms}
+          price={property.price}
+          email={property.email}
+        />
       ))}
     </section>
   );
