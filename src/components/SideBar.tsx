@@ -9,11 +9,11 @@ interface QueryCity {
   city: string;
 }
 
-interface QuerySort {
+interface SortPrice {
   price: number;
 }
 
-type ValueObj = QueryCity | QuerySort;
+type ValueObj = QueryCity | SortPrice;
 
 const SideBar: React.FC = (): JSX.Element => {
   const buildQueryString = (operation: string, valueObj: ValueObj): string => {
